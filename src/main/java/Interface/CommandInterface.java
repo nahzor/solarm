@@ -5,7 +5,7 @@
  */
 package Interface;
 
-import AlarmHandlers.ClockCheckHandler;
+import AlarmHandlers.ClockHandler;
 import YoutubeDataModels.CommandInputModel;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -30,9 +30,9 @@ public class CommandInterface {
     private static final String COMMAND_EXIT = "exit";
 
     /**
-     * ClockCheckHandler handler.
+     * ClockHandler handler.
      */
-    private static ClockCheckHandler clockCheckHandler;
+    private static ClockHandler clockCheckHandler;
 
     /**
      * Class main
@@ -50,7 +50,7 @@ public class CommandInterface {
         String commandType = "";
 
         // Initialize clock check handler.
-        clockCheckHandler = new ClockCheckHandler();
+        clockCheckHandler = new ClockHandler();
         clockCheckHandler.startClock();
 
         do {

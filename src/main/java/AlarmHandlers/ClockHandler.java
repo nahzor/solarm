@@ -24,7 +24,7 @@ import java.util.logging.Logger;
  * @version 1.0
  * @since 2017-10-21
  */
-public class ClockCheckHandler {
+public class ClockHandler {
 
     /**
      * One second represented as milli-seconds
@@ -41,7 +41,7 @@ public class ClockCheckHandler {
     /**
      * Handle to the SolClock class
      */
-    private SolClock clock;
+    private Clock clock;
 
     /**
      * Handle to the SolClock class
@@ -53,7 +53,7 @@ public class ClockCheckHandler {
      */
     public void startClock() {
         dateTimeToVideoMap = new HashMap<>();
-        clock = new SolClock();
+        clock = new Clock();
         clock.start();
     }
 
@@ -77,7 +77,11 @@ public class ClockCheckHandler {
         
         // TODO: Switch to use a print-to-console method / logging framework.
         // TODO: Display time and date. Assume user manually checks that his date time is in valid format.
-        System.out.println("Successfully added alarm with video: "+video.getTitle());
+        if(video != null){
+            System.out.println("Successfully added alarm with video: "+video.getTitle());
+        }else{
+            System.out.println("Video not found for keywords or user not authorized. Try again.");
+        }
     }
 
     /**
@@ -101,7 +105,7 @@ public class ClockCheckHandler {
      * @version 1.0
      * @since 2017-10-21
      */
-    class SolClock extends Thread {
+    class Clock extends Thread {
 
         @Override
         public void run() {
@@ -122,7 +126,7 @@ public class ClockCheckHandler {
                         // Trigger alarm
                         AlarmTriggerHandler.triggerYoutubeAlarm(video.getId());
                     } catch (URISyntaxException | IOException ex) {
-                        Logger.getLogger(ClockCheckHandler.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(ClockHandler.class.getName()).log(Level.SEVERE, null, ex);
                     }
 
                     // Remove alarm that was already processed.

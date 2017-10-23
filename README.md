@@ -22,7 +22,7 @@
 * Thats it! Build and Run the project.
 
 ## Usage example
-![solarm usage](https://github.com/rosh89/solarm/blob/develop/solarm_usage.png "Solarm Usage")
+![solarm usage](https://github.com/rosh89/solarm/blob/master/solarm_usage.png "Solarm Usage")
 
 ## TODO
 * Functionality to list and delete alarms, setting alarms with a duration value, providing URLs directly instead of keywords, setting repeating alarms.
