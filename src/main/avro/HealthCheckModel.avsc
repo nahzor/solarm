@@ -1,0 +1,19 @@
+{
+  "type" : "record",
+  "name" : "HealthCheckModel",
+  "namespace" : "avro",
+  "fields" : [ {
+    "name" : "id",
+    "type" : "string",
+    "doc"  : "id of youtube channel"
+  }, {
+    "name" : "title",
+    "type" : "string",
+    "doc"  : "youtube channel title"
+  }, {
+    "name" : "viewCount",
+    "type" : "long",
+    "doc"  : "number of views"
+  } ],
+  "doc:" : "A basic schema to store some youtube channel info for health check"
+}

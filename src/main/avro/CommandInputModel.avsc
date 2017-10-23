@@ -1,0 +1,23 @@
+{
+  "type" : "record",
+  "name" : "CommandInputModel",
+  "namespace" : "avro",
+  "fields" : [ {
+    "name" : "command",
+    "type" : "string",
+    "doc"  : "command type. [set]"
+  }, {
+    "name" : "date",
+    "type" : "string",
+    "doc"  : "date string. Format <mmddyyyy>"
+  }, {
+    "name" : "time",
+    "type" : "string",
+    "doc"  : "time string. Format <hhhh>"
+  }, {
+    "name" : "songKeywords",
+    "type" : "string",
+    "doc"  : "Keywords for the song."
+  }],
+  "doc:" : "Command Schema"
+}
