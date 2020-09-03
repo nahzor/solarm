@@ -1,6 +1,6 @@
 # solarm
 * Short for song alarm.
-* A simple command-line application to set alarms to play youtube music.
+* A simple command-line application to set alarms to play youtube vdeos.
 * Once an alarm is set, the application triggers that youtube video in the default browser.
 * The user is in control of having a browser on the system and to have the youtube/system volume set at the required level.
 
@@ -30,8 +30,7 @@
 * Error Logging.
 * Address TODOs in the comments in the code.
 * Serializing alarm data to a file so that they can be retrieved when the application is reopened.
-* Speech to text fuctionality.
-* Playing from sources other than Youtube.
+* Bug: lock dateTimeToVideoMap.
 
 
 
